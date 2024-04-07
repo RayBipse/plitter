@@ -18,7 +18,6 @@ const EditModal = () => {
     const [name, setName] = useState("");
     const [username, setUsername] = useState("");
     const [bio, setBio] = useState("");
-    console.log(currentUser);
     useEffect(() => {
         setProfileImage(currentUser?.profileImage);
         setCoverImage(currentUser?.coverImage);
@@ -49,7 +48,6 @@ const EditModal = () => {
             setIsLoading(false);
         }
     }, [bio, name, username, profileImage, coverImage, editModal, mutateFetchedUser]);
-    console.log(name, username, bio);
     const bodyContent = (
         <div className="flex flex-col gap-4">
             <ImageUpload
